@@ -1,2 +1,0 @@
-const SUPABASE_URL = 'https://njixgaybvkzemikghmob.supabase.co';
-const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5qaXhnYXlidmt6ZW1pa2dobW9iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyOTk5MjksImV4cCI6MjA4ODg3NTkyOX0.NeXqQwnyCOJ-atNsajAO3Ps_aMZ8Aa0SW04zWH6-XKw';
