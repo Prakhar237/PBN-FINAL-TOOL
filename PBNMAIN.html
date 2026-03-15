@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel — Domain Manager</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="topbar-logo">Domain<span>Admin</span></div>
+        <div class="topbar-right">
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Mode">☀️</button>
+            <span class="status-dot" style="margin-left: 0.75rem;"></span>
+            <span id="conn-status">Connecting...</span>
+        </div>
+    </div>
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div>
+                <div class="sidebar-label">Select Domain</div>
+                <div class="domain-select-wrap">
+                    <select id="domain-select" onchange="onDomainSelect(this.value)">
+                        <option value="">— choose a domain —</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn-new" onclick="newDomain()">＋ Add New Domain</button>
+
+            <div class="sidebar-label" style="margin-top:0.5rem">All Domains</div>
+            <div class="domain-list" id="domain-list">
+                <div class="skeleton"></div>
+                <div class="skeleton" style="height:32px;opacity:0.6"></div>
+                <div class="skeleton" style="height:32px;opacity:0.3"></div>
+            </div>
+        </div>
+
+        <!-- Editor -->
+        <div class="editor" id="editor">
+            <div class="empty-state">
+                <div class="empty-icon">⬡</div>
+                <h2>No domain selected</h2>
+                <p>Pick a domain from the sidebar or add a new one to start editing.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
