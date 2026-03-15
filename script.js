@@ -1,10 +1,9 @@
 // ═══════════════════════════════════════════════════
 // CONFIG
-// Note: You must inject these variables (e.g. via Netlify snippets)
-// or define them here if not pushed to Git.
+// Variables are loaded automatically by Vite from the .env file
 // ═══════════════════════════════════════════════════
-const SUPABASE_URL = window.SUPABASE_URL || 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON = window.SUPABASE_ANON || 'YOUR_SUPABASE_ANON_KEY';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON = import.meta.env.VITE_SUPABASE_ANON;
 // ═══════════════════════════════════════════════════
 
 const HEADERS = {
