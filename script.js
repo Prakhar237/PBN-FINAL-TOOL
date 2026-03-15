@@ -273,26 +273,29 @@ async function publish() {
 
   const screenshots = textToUrls(val('f-screenshots'));
 
-  const payload = {
-    overview: val('f-overview'),
-    price: val('f-price'),
-    backlink_counter: parseInt(val('f-backlinks')) || 0,
-    domain_age: val('f-age'),
-    monthly_visits: val('f-visits'),
-    seo_rating: val('f-seo'),
-    about: val('f-about'),
-    perfect_for: val('f-perfect'),
-    market_opportunity: val('f-market'),
-    mini_blog_title: val('f-mini-title'),
-    mini_blog: val('f-mini-blog'),
-    special_feature_1: val('f-sf1'),
-    special_feature_2: val('f-sf2'),
-    secondary_blog_title: val('f-sec-title'),
-    secondary_blog: val('f-sec-blog'),
-    contnious_blog_title1: val('f-cont1-title'),
-    contnious_blog_content1: val('f-cont1'),
-    contnious_blog_title2: val('f-cont2-title'),
-    contnious_blog_content2: val('f-cont2'),
+    const backval = val('f-backlinks');
+    const backlinkCounter = backval === '' ? null : (parseInt(backval) || 0);
+
+    const payload = {
+        overview: val('f-overview') || null,
+        price: val('f-price') || null,
+        backlink_counter: backlinkCounter,
+        domain_age: val('f-age') || null,
+        monthly_visits: val('f-visits') || null,
+        seo_rating: val('f-seo') || null,
+    about: val('f-about') || null,
+    perfect_for: val('f-perfect') || null,
+    market_opportunity: val('f-market') || null,
+    mini_blog_title: val('f-mini-title') || null,
+    mini_blog: val('f-mini-blog') || null,
+    special_feature_1: val('f-sf1') || null,
+    special_feature_2: val('f-sf2') || null,
+    secondary_blog_title: val('f-sec-title') || null,
+    secondary_blog: val('f-sec-blog') || null,
+    contnious_blog_title1: val('f-cont1-title') || null,
+    contnious_blog_content1: val('f-cont1') || null,
+    contnious_blog_title2: val('f-cont2-title') || null,
+    contnious_blog_content2: val('f-cont2') || null,
     screenshot_urls: screenshots,
     powered_by_promotionocean: document.getElementById('f-powered').classList.contains('on')
   };
